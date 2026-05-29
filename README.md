@@ -23,23 +23,23 @@ No build step or package install is required.
 
 ### 🔐 1
 
-![1](screenshots/screenshot1.png)
+![1](screenshots/Screenshot1.png)
 --- 
 
 ### 🔐 2
 
-![2](screenshots/screenshot2.png)
+![2](screenshots/Screenshot2.png)
 
 ---
 
 ### 🌍 3
 
-![3](screenshots/screenshot3.png)
+![3](screenshots/Screenshot3.png)
 ---
 
 ### 📊 4
 
-![1](screenshots/screenshot4.png)
+![1](screenshots/Screenshot4.png)
 ---
 
 ## Files

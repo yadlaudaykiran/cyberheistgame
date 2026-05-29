@@ -17,6 +17,31 @@ No build step or package install is required.
 - Cipher prompts show the reversed key. Enter the original four-digit key.
 - Keep trace below 100% and reach the vault to finish the mission.
 
+
+
+## 📸 Screenshots
+
+### 🔐 1
+
+![1](screenshots/screenshot1.png)
+--- 
+
+### 🔐 2
+
+![2](screenshots/screenshot2.png)
+
+---
+
+### 🌍 3
+
+![3](screenshots/screenshot3.png)
+---
+
+### 📊 4
+
+![1](screenshots/screenshot4.png)
+---
+
 ## Files
 
 - `index.html` - Game shell

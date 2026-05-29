@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyberheist</title>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <canvas id="city-canvas" aria-hidden="true"></canvas>
+
+  <main class="app-shell">
+    <section class="topbar" aria-label="Cyberheist status">
+      <div class="brand">
+        <span class="brand-mark">CH</span>
+        <div>
+          <h1>Cyberheist</h1>
+          <p>Neon intrusion simulator</p>
+        </div>
+      </div>
+      <div class="run-status">
+        <div class="metric">
+          <span>Trace</span>
+          <strong id="trace-value">0%</strong>
+        </div>
+        <div class="metric">
+          <span>Credits</span>
+          <strong id="credits-value">0</strong>
+        </div>
+        <button id="new-run-button" class="icon-button" type="button" title="Start new run" aria-label="Start new run">↻</button>
+      </div>
+    </section>
+
+    <section class="game-grid">
+      <aside class="mission-panel" aria-label="Mission control">
+        <div class="panel-heading">
+          <span class="kicker">Contract board</span>
+          <h2 id="mission-title">Select a mission</h2>
+        </div>
+        <div id="mission-list" class="mission-list"></div>
+      </aside>
+
+      <section class="network-panel" aria-label="Corporate network">
+        <div class="panel-heading network-heading">
+          <div>
+            <span class="kicker">Target network</span>
+            <h2 id="target-name">No active breach</h2>
+          </div>
+          <button id="start-mission-button" class="primary-button" type="button">Start breach</button>
+        </div>
+        <div id="network-map" class="network-map" role="grid" aria-label="Server node grid"></div>
+      </section>
+
+      <aside class="ops-panel" aria-label="Operations deck">
+        <div class="panel-heading">
+          <span class="kicker">Intrusion tools</span>
+          <h2 id="objective-title">Awaiting uplink</h2>
+        </div>
+
+        <div class="tool-stack">
+          <button class="tool-button active" type="button" data-tool="spoof">
+            <span>Spoof</span>
+            <small>Slip past cameras</small>
+          </button>
+          <button class="tool-button" type="button" data-tool="decrypt">
+            <span>Decrypt</span>
+            <small>Break lock ciphers</small>
+          </button>
+          <button class="tool-button" type="button" data-tool="pulse">
+            <span>Pulse</span>
+            <small>Stun firewall sentries</small>
+          </button>
+        </div>
+
+        <div class="hack-console" aria-live="polite">
+          <div class="console-top">
+            <span>Terminal</span>
+            <span id="stealth-value">Stealth: 100</span>
+          </div>
+          <div id="terminal-output" class="terminal-output"></div>
+        </div>
+
+        <div id="cipher-card" class="cipher-card hidden">
+          <div class="cipher-prompt">
+            <span id="cipher-label">Cipher</span>
+            <strong id="cipher-code">0000</strong>
+          </div>
+          <label for="cipher-input">Enter key</label>
+          <div class="cipher-row">
+            <input id="cipher-input" type="text" inputmode="numeric" maxlength="4" autocomplete="off">
+            <button id="cipher-submit" class="primary-button" type="button">Crack</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="src/game.js"></script>
+</body>
+</html>
